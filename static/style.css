@@ -1,0 +1,215 @@
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Inter, "Segoe UI", Arial, sans-serif;
+    color: #20243a;
+    background: linear-gradient(135deg, #f3f5ff, #f8f9fc);
+}
+
+.container {
+    width: min(1300px, 94%);
+    margin: 0 auto;
+    padding: 32px 0;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: grid;
+    place-items: center;
+    width: 72px;
+    height: 72px;
+    border-radius: 22px;
+    color: white;
+    font-size: 24px;
+    font-weight: 800;
+    background: linear-gradient(135deg, #6659e8, #9b5de5);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+.header p {
+    margin: 8px 0 0;
+    color: #747991;
+    font-size: 18px;
+}
+
+.status {
+    margin-left: auto;
+    color: #218653;
+    font-size: 17px;
+}
+
+.status span {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 8px;
+    border-radius: 50%;
+    background: #2ab477;
+}
+
+/* Hero section */
+.hero {
+    padding: 70px 0 48px;
+    text-align: center;
+}
+
+.eyebrow {
+    color: #6c5ce7;
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.hero h2 {
+    margin: 30px 0;
+    font-size: clamp(36px, 5vw, 64px);
+    letter-spacing: -2px;
+}
+
+.hero h2 span {
+    color: #705de7;
+}
+
+.hero p {
+    color: #747991;
+    font-size: 22px;
+    line-height: 1.6;
+}
+
+/* Text input panel */
+.panel {
+    padding: 40px;
+    border: 1px solid #e6e8f1;
+    border-radius: 30px;
+    background: white;
+    box-shadow: 0 12px 40px #252c5510;
+}
+
+.panel > label {
+    display: block;
+    margin-bottom: 16px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.autocomplete-wrap {
+    position: relative;
+    width: 100%;
+}
+
+/* Text overlay showing the predicted word */
+.ghost-text {
+    position: absolute;
+    inset: 0;
+    padding: 24px;
+    overflow: hidden;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    word-break: normal;
+    border: 1px solid transparent;
+    color: #111827;
+    font: inherit;
+    font-size: 20px;
+    line-height: 1.7;
+    pointer-events: none;
+}
+
+/* Predicted word */
+.ghost-suggestion {
+    color: #a0a5b5;
+}
+
+/* Actual editable text */
+.autocomplete-wrap textarea {
+    position: relative;
+    display: block;
+    width: 100%;
+    min-height: 225px;
+    padding: 24px;
+    resize: vertical;
+    border: 1px solid #dfe2ee;
+    border-radius: 18px;
+    outline: none;
+    background: transparent;
+    color: transparent;
+    caret-color: #705de7;
+    font-family: inherit;
+    font-size: 20px;
+    line-height: 1.7;
+}
+
+.autocomplete-wrap textarea:focus {
+    border-color: #8d7bf0;
+}
+
+.autocomplete-wrap textarea::placeholder {
+    color: #999eb0;
+}
+
+.autocomplete-wrap textarea::selection {
+    background: #c9c0ff;
+    color: transparent;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding-top: 20px;
+    }
+
+    .logo {
+        width: 52px;
+        height: 52px;
+        border-radius: 15px;
+        font-size: 19px;
+    }
+
+    .header h1 {
+        font-size: 22px;
+    }
+
+    .header p {
+        font-size: 13px;
+    }
+
+    .status {
+        margin-left: 0;
+        font-size: 13px;
+    }
+
+    .hero {
+        padding: 42px 0 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .panel {
+        padding: 18px;
+        border-radius: 18px;
+    }
+
+    .autocomplete-wrap textarea,
+    .ghost-text {
+        padding: 16px;
+        font-size: 16px;
+        line-height: 1.7;
+    }
+}

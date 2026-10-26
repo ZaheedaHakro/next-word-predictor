@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LSTM Next Word Predictor</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header class="header">
+    <div class="logo">AI</div>
+    <div>
+        <h1>Next Word Predictor</h1>
+        <p>Powered by your trained LSTM model</p>
+    </div>
+    <span class="status"><span></span> Model Ready</span>
+</header>
+
+<section class="hero">
+    <span class="eyebrow">SMART TEXT COMPLETION</span>
+    <h2>What comes <span>next?</span></h2>
+    <p>Enter a sentence and let your AI predict the next word.</p>
+</section>
+
+<section class="panel">
+    <label for="inputText">Your text</label>
+
+    <div class="autocomplete-wrap">
+        <div id="ghostText" class="ghost-text" aria-hidden="true"></div>
+        <textarea id="inputText"
+            placeholder="Start typing..."
+            maxlength="2000"
+            spellcheck="false"
+            autocomplete="off"></textarea>
+    </div>
+
+</section>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
